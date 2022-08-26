@@ -10,13 +10,16 @@ import {
   gql,
 } from "@apollo/client";
 
+
+// instantiate apollo client
 const client = new ApolloClient({
-  uri: "https://flyby-gateway.herokuapp.com/",
+  uri: "https://flyby-gateway.herokuapp.com/", //url of graphql server
   cache: new InMemoryCache(), //caches query results
 });
 
 reportWebVitals();
 
+//query string
 client
   .query({
     query: gql`
